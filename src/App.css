@@ -1,0 +1,66 @@
+:root {
+  --transition-fast: 0.15s ease-in-out;
+  --navbar-height: 60px;
+  --sidebar-width-desktop: 250px;
+  --sidebar-width-mobile: 200px;
+
+  --color-bg: #3D365C;
+  --color-bg2: #7C4585;
+  --color-accent: #F8B55F;
+  --text-color-pink: #C95792;
+
+  --spacing-md: 16px;
+  
+}
+
+
+/* Global reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: var(--color-bg);
+}
+
+body {
+  font-family: sans-serif;
+}
+
+
+/* push content below navbar */
+.app-container {
+  padding-top: var(--navbar-height);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+/* Sidebar + content */
+.main-layout {
+  display: flex;
+  flex: 1;
+}
+
+/* Stack on mobile */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+}
+
+/* Center page content */
+.content {
+  flex: 1;                       
+  display: flex;
+  flex-direction: column;
+  justify-content: center;       
+  align-items: center;           
+  text-align: center;            
+  padding: var(--spacing-md);
+  color: var(--color-accent);
+}

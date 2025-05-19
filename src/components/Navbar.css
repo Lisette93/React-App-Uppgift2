@@ -1,0 +1,48 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--navbar-height);
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 1000;
+}
+
+
+/* Desktop links */
+.nav-links {
+  color:white;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links a {
+  color: var(--color-surface);
+  text-decoration: none;
+  padding: 0.5rem;
+}
+.nav-links a:hover,
+.nav-links a:active,
+.nav-links a:focus{
+  color: var(--color-accent);
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+}
+
+
+/* Menu toggle */
+.sidebar-hamburger {
+  margin-left: auto;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hide on desktop */
+@media (min-width: 769px) {
+  .sidebar-hamburger {
+    display: none;
+  }
+}
