@@ -62,7 +62,7 @@ body {
   grid-template-columns:
     1fr                             
     var(--sidebar-width-desktop);
-  gap: 200px;
+  gap: 20%;
   max-width: 1000px;       
   margin: 0 auto;          
   padding: 0 var(--spacing-md);

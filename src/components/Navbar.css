@@ -11,24 +11,6 @@
 }
 
 
-/* Nav-left (Logo + Title) */
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-}
-
-.nav-logo {
-  height: 2rem;
-  margin-left:var(--spacing-md);         
-}
-
-.nav-title {
-  color: white;
-  font-weight: 700;
-  margin-left: var(--spacing-md);
-}
-
 
 /* Nav links (Desktop & Mobile) */
 .nav-links {

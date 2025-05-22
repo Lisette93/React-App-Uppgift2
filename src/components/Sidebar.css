@@ -1,13 +1,32 @@
 .sidebar {
-  top: var(--navbar-height);                        
-  height: calc(100vh - var(--navbar-height)); 
+  top: 0;                        
+  height: 100vh; 
   background: var(--color-bg2);
-  padding: 1rem;
+  padding: var(--spacing-md);
   transition: transform 0.3s ease;
   position: fixed;
   width: var(--sidebar-width-desktop);
   transform: translateX(0);
   align-self: stretch;
+  z-index:1000;
+}
+
+
+.sidebar-logo {
+  height: 2rem;
+  margin-left: var(--spacing-lg);
+}
+
+
+.sidebar-title {
+  color: white;
+  font-weight: bold;
+  margin-left: var(--spacing-lg);
+  letter-spacing: 0.05em;
+}
+
+.sidebar-links {
+  margin-top: 100px;
 }
 
 .sidebar-links a {

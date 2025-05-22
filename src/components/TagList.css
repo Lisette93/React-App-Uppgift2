@@ -1,27 +1,33 @@
 .tag-list {
   display: grid;
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(2, 1fr);
   column-gap:2rem;
+  max-width: 400px; 
+  margin: 0 auto;
 }
 
 .tag-button{
-    background-color:var(--button-color);
-    color: white;
+  box-sizing: border-box;
+    background-color:var(--accent-color);
+    color: var(--color-yellow);
     border: none;
     padding: var(--spacing-md);
     border-radius: var(--border-radius);
     cursor:pointer;
-     width: max-content;
+    width: 100%;
     align-self: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .tag-button:hover,
-.tag-button:active,
-.tag-button:focus {
+.tag-button:active {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     background: var(--color-yellow); 
     color: white;
+}
+
+.tag-button:focus {
+  outline: none;
 }
 
 @media (max-width: 768px) {

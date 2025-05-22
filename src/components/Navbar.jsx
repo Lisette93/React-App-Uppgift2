@@ -5,10 +5,7 @@ import reactLogo from '../assets/react.svg'
 export default function Navbar({ toggleSidebar }) {
   return (
     <nav className="navbar">
-      <div className="nav-left">
-         <img src={reactLogo} alt="React logo" className="nav-logo" />
-        <span className="nav-title">ASSIGNMENT 2</span>
-      </div>
+      
       <div className="nav-links">
         <a href="/">Home</a>
         <a href="/about">About</a>
