@@ -1,31 +1,32 @@
 .sidebar {
+  top: var(--navbar-height);                        
+  height: calc(100vh - var(--navbar-height)); 
   background: var(--color-bg2);
   padding: 1rem;
   transition: transform 0.3s ease;
-  position: relative;
+  position: fixed;
   width: var(--sidebar-width-desktop);
   transform: translateX(0);
+  align-self: stretch;
 }
 
-
-/*Sidebar links */
 .sidebar-links a {
   display: block;
   text-align:center;
-  margin: 0.5rem 0;
-  padding: 0.25rem 1rem;
-  color: var(--text-color-pink);
+  margin: 1rem ;
+  padding: 0.25rem ;
+  border-radius: var(--border-radius) ;
+  background-color: var(--color-yellow);
+  color: white;
   text-decoration:none;
 }
+
 .sidebar-links a:hover,
 .sidebar-links a:active,
 .sidebar-links a:focus {
-  background: var(--color-accent);
-  transition:
-    background-color var(--transition-fast),
-    color            var(--transition-fast);
-  color: white;
-  border-radius: 4px;
+  color: var(--color-yellow);
+  background: rgba(255,255,255,0.1);
+  border-radius: var(--border-radius);
 }
 
 

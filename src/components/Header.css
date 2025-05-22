@@ -1,6 +1,7 @@
 .header {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;  
   padding: 1rem;
-  background: var(--color-purple);
-  color: white;
+  color: var(--color-yellow);
   text-align: center;
 }

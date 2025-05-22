@@ -1,0 +1,32 @@
+.tag-list {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  column-gap:2rem;
+}
+
+.tag-button{
+    background-color:var(--button-color);
+    color: white;
+    border: none;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    cursor:pointer;
+     width: max-content;
+    align-self: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.tag-button:hover,
+.tag-button:active,
+.tag-button:focus {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    background: var(--color-yellow); 
+    color: white;
+}
+
+@media (max-width: 768px) {
+  .tag-list {
+    margin: auto;
+    width: auto;
+  }
+}

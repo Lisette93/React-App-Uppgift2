@@ -1,3 +1,4 @@
+/* Navbar core */
 .navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -5,32 +6,56 @@
   background: var(--color-bg);
   display: flex;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 var(--spacing-md);
   z-index: 1000;
 }
 
 
-/* Desktop links */
-.nav-links {
-  color:white;
+/* Nav-left (Logo + Title) */
+.nav-left {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: var(--spacing-sm);
 }
+
+.nav-logo {
+  height: 2rem;
+  margin-left:var(--spacing-md);         
+}
+
+.nav-title {
+  color: white;
+  font-weight: 700;
+  margin-left: var(--spacing-md);
+}
+
+
+/* Nav links (Desktop & Mobile) */
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  gap: var(--spacing-md);
+}
+
 .nav-links a {
-  color: var(--color-surface);
+  color: white;
   text-decoration: none;
   padding: 0.5rem;
+  transition: 
+    background var(--transition-fast),
+    color      var(--transition-fast);
 }
+
 .nav-links a:hover,
 .nav-links a:active,
 .nav-links a:focus{
-  color: var(--color-accent);
-  background: rgba(255,255,255,0.1);
-  border-radius: 4px;
+  color: var(--color-yellow);
+  background: var(--accent-color);
+  border-radius: var(--border-radius);
 }
 
 
-/* Menu toggle */
+/* Hamburger toggle */
 .sidebar-hamburger {
   margin-left: auto;
   font-size: 1.5rem;
@@ -38,6 +63,18 @@
   border: none;
   color: white;
   cursor: pointer;
+}
+
+.sidebar-hamburger:hover {
+  color: var(--color-yellow);
+}
+
+
+/* Responsive overrides */
+@media (max-width: 768px) {
+  .nav-left {
+    display: none;
+  }
 }
 
 /* Hide on desktop */

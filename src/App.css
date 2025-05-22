@@ -1,15 +1,22 @@
 :root {
+  /* Transitions */
   --transition-fast: 0.15s ease-in-out;
+
+  /* Layout constants */
   --navbar-height: 60px;
   --sidebar-width-desktop: 250px;
   --sidebar-width-mobile: 200px;
 
-  --color-bg: #3D365C;
-  --color-bg2: #7C4585;
-  --color-accent: #F8B55F;
-  --text-color-pink: #C95792;
-
+  /* Color palette */
+  --color-bg:#0E2148 ;
+  --color-bg2: #05173b;
+  --accent-color: rgba(255,255,255,0.1);
+  --color-yellow: #E3D095;
+  
+/* Spacing & border-radius */
   --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --border-radius: 4px;
   
 }
 
@@ -27,11 +34,12 @@ html, body {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 
-/* push content below navbar */
+/*App Shell & Core Layout
+ pushes content below navbar */
 .app-container {
   padding-top: var(--navbar-height);
   display: flex;
@@ -40,27 +48,56 @@ body {
 }
 
 
-/* Sidebar + content */
-.main-layout {
-  display: flex;
-  flex: 1;
+/* hold sidebar and main area */
+.body-layout {
+  display:flex;
+  flex:1;
+  align-items: stretch;
 }
 
-/* Stack on mobile */
+
+/* content + taglist area */
+.main-layout {
+  display: grid;
+  grid-template-columns:
+    1fr                             
+    var(--sidebar-width-desktop);
+  gap: 200px;
+  max-width: 1000px;       
+  margin: 0 auto;          
+  padding: 0 var(--spacing-md);
+  align-content:center;
+}
+
+
+/* Page Content Styling */
+.content {
+  position: relative;            
+  width: 100%;                   
+  max-width: 600px;               
+  margin: 0 auto;                
+  display: flex;                 
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  color: white;
+}
+
+
+/* Responsive Overrides */
 @media (max-width: 768px) {
+    .body-layout {
+    flex-direction: column;  
+  }
+
   .main-layout {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
   }
 }
 
-/* Center page content */
-.content {
-  flex: 1;                       
-  display: flex;
-  flex-direction: column;
-  justify-content: center;       
-  align-items: center;           
-  text-align: center;            
-  padding: var(--spacing-md);
-  color: var(--color-accent);
-}
+
+
+
