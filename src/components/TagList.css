@@ -1,8 +1,8 @@
 .tag-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap:2rem;
-  max-width: 400px; 
+  gap: var(--spacing-lg);
+  max-width: 400px;  
   margin: 0 auto;
 }
 
@@ -32,7 +32,16 @@
 
 @media (max-width: 768px) {
   .tag-list {
-    margin: auto;
-    width: auto;
+    display: flex;
+    flex-wrap: wrap;            
+    gap: var(--spacing-md);     
+    justify-content: center;    
+    max-width: var(--sidebar-width-mobile);
+    margin: var(--spacing-md) auto;
+  }
+
+  .tag-list .tag-button {
+    flex: 1 1 calc(50% - var(--spacing-md)); 
+    max-width: calc(50% - var(--spacing-md));
   }
 }

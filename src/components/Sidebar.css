@@ -14,7 +14,7 @@
 
 .sidebar-logo {
   height: 2rem;
-  margin-left: var(--spacing-lg);
+  
 }
 
 
@@ -49,8 +49,8 @@
 }
 
 
-/* Off canvas on mobile */
-@media (max-width: 768px) {
+/* Responsive override */
+@media (max-width: 1024px) {
   .sidebar {
     position: fixed;
     top: var(--navbar-height);
@@ -59,10 +59,31 @@
     width: var(--sidebar-width-mobile);
     transform: translateX(100%);
     z-index: 900;
+    transition: transform 0.3s ease;
   }
   .sidebar:not(.collapsed) {
     transform: translateX(0);
   }
 }
+
+ .sidebar-hamburger {
+    display: block;
+  }
+
+ @media (min-width: 1025px) {
+  .sidebar {
+    position: relative; 
+    transform: none !important;
+    width: var(--sidebar-width-desktop);
+    height: 100vh;
+    top: auto; right: auto; bottom: auto;
+    z-index: auto;
+  }
+  .sidebar-hamburger {
+    display: none;            
+  }
+}
+
+  
 
 

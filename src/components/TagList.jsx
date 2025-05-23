@@ -7,9 +7,11 @@ const Tags = [
   'Space',
   'History',
   'Nature',
-  'Food',
+  'Art',
   'Culture',
   'Science',
+  'Food',
+  'Math',
 ];
 
 export default function TagList() {

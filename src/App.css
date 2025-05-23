@@ -53,6 +53,7 @@ body {
   display:flex;
   flex:1;
   align-items: stretch;
+  background: var(--color-bg); 
 }
 
 
@@ -83,9 +84,9 @@ body {
   color: white;
 }
 
+/* Responsive override */
 
-/* Responsive Overrides */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .body-layout {
     flex-direction: column;  
   }
@@ -97,6 +98,7 @@ body {
     gap: var(--spacing-md);
   }
 }
+
 
 
 
